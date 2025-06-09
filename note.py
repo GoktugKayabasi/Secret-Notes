@@ -1,10 +1,34 @@
 from tkinter import *
+from tkinter import messagebox
+
+def save_and_encrypt_notes():
+    title=title_entry.get()
+    message=input_text.get("1.0",END)
+    master_secter = master_secret_input.get()
+
+    if len(title) == 0 or len(message) == 0 or len(master_secter) == 0:
+        messagebox.showinfo(title="Error!!!",message="Pleas enter all info.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 FONT = ("Verdena",20,"normal")
-
-
-
-
 window=Tk()
 window.title("Secret Notes")
 window.config(padx=30 , pady=30 )
@@ -52,7 +76,7 @@ master_secret_input=Entry(width=30)
 master_secret_input.pack()
 
 
-save_button=Button(text="Save & Encrypt")
+save_button=Button(text="Save & Encrypt", command=save_and_encrypt_notes)
 save_button.pack()
 
 decrypt_button = Button(text="Decrypt")
@@ -60,3 +84,22 @@ decrypt_button.pack()
 
 
 window.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a=("-")
